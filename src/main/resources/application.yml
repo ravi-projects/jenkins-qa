@@ -1,0 +1,20 @@
+# The below properties are added for testing configurationproperties annotation behaviour.
+application:
+  athmaBucket:
+    masterExport: /athmabucket/masterexport/
+    tempExport: /athmabucket/tempexport/
+    reportFilePath: /athmabucket/reportFilePath/
+    admissionFilePath: /athmabucket/admission/
+    printSaveFile: /athmabucket/printtemplate/files/
+    inPatientAttachmentsPath: /athmabucket/inpatientattachments/
+    logoFilePath: /athmabucket/organizationlogo/
+  configs:
+    indexPageSize: 200
+    exportRowsCount: 200
+  menu:
+    - title: home
+      name: home
+      path: /home
+    - title: login
+      name: login
+      path: /login

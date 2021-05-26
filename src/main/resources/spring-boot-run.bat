@@ -1,0 +1,1 @@
+java -jar %WORKSPACE%/../sak-dev-build/target/springdemo-0.0.1-SNAPSHOT.jar
