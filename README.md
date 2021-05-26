@@ -27,3 +27,6 @@ mvn test or mvn clean install
 
 # skip all test cases using below command
 mvn clean install -DskipTests=true
+
+# to run test cases
+mvn surefire:test
