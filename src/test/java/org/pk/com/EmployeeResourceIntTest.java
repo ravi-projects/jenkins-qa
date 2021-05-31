@@ -102,7 +102,7 @@ public class EmployeeResourceIntTest {
         Employee result = employeeList.get(employeeList.size() - 1);
         //compare the inserted record
         Assertions.assertThat(result.getFirstName()).isEqualTo(FIRST_NAME);
-        Assertions.assertThat(result.getLastName()).isEqualTo(LAST_NAME);
+        Assertions.assertThat(result.getLastName()).isEqualTo(FIRST_NAME);
         Assertions.assertThat(result.getEmail()).isEqualTo(EMAIL);
     }
 
