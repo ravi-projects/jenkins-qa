@@ -131,6 +131,6 @@ public class EmployeeResourceIntTest {
                 .andExpect(MockMvcResultMatchers.status().isOk());
         //Fetch the records after deleting the record
         List<Employee> employeeList = employeeRepository.findAll();
-        Assertions.assertThat(employeeList.size()).isEqualTo(recordsBeforeDelete + 1);
+        Assertions.assertThat(employeeList.size()).isEqualTo(recordsBeforeDelete - 1);
     }
 }
