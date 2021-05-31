@@ -91,7 +91,7 @@ public class EmployeeResourceIntTest {
         //before inserting find the size
         int databaseSizeBeforeCreate = employeeRepository.findAll().size();
         restEmployeeMockMvc
-                .perform(MockMvcRequestBuilders.post("/api/employee")
+                .perform(MockMvcRequestBuilders.post("/api/employees")
                         .contentType(MediaType.APPLICATION_JSON_UTF8)
                         .content(TestUtil.convertObjectToJsonBytes(employee)))
                 .andExpect(MockMvcResultMatchers.status().isCreated());
@@ -102,7 +102,7 @@ public class EmployeeResourceIntTest {
         Employee result = employeeList.get(employeeList.size() - 1);
         //compare the inserted record
         Assertions.assertThat(result.getFirstName()).isEqualTo(FIRST_NAME);
-        Assertions.assertThat(result.getLastName()).isEqualTo(FIRST_NAME);
+        Assertions.assertThat(result.getLastName()).isEqualTo(LAST_NAME);
         Assertions.assertThat(result.getEmail()).isEqualTo(EMAIL);
     }
 
@@ -131,6 +131,6 @@ public class EmployeeResourceIntTest {
                 .andExpect(MockMvcResultMatchers.status().isOk());
         //Fetch the records after deleting the record
         List<Employee> employeeList = employeeRepository.findAll();
-        Assertions.assertThat(employeeList.size()).isEqualTo(recordsBeforeDelete - 1);
+        Assertions.assertThat(employeeList.size()).isEqualTo(recordsBeforeDelete + 1);
     }
 }
