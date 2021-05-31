@@ -91,7 +91,7 @@ public class EmployeeResourceIntTest {
         //before inserting find the size
         int databaseSizeBeforeCreate = employeeRepository.findAll().size();
         restEmployeeMockMvc
-                .perform(MockMvcRequestBuilders.post("/api/employees")
+                .perform(MockMvcRequestBuilders.post("/api/employee")
                         .contentType(MediaType.APPLICATION_JSON_UTF8)
                         .content(TestUtil.convertObjectToJsonBytes(employee)))
                 .andExpect(MockMvcResultMatchers.status().isCreated());
